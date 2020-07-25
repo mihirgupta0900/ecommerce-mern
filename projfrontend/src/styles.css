@@ -1,0 +1,21 @@
+.btn,
+.jumbotron,
+.nav :hover {
+  border-radius: 0px;
+}
+
+body {
+  background: #f9f7f7;
+}
+
+footer{
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; */
+  /* z-index: -1; */
+}
+
+/* .container-fluid{
+  height: 100vh;
+} */
