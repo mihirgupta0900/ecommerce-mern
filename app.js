@@ -42,13 +42,11 @@ app.use("/api", productRoutes);
 app.use("/api", orderRoutes);
 app.use("/api", stripeRoutes);
 app.use("/api", brainTreeRoutes);
-app.use(express.static("projfrontend/build"));
+app.use(express.static(path.join(__dirname, "projbackend", "build")));
 
 // If no API routes are hit, send the React app
-app.use((req, res) => {
-    res.sendFile(
-        path.join(__dirname, "projfrontend", "build", "index.html")
-    );
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "projfrontend", "build", "index.html"));
 });
 
 // PORT
